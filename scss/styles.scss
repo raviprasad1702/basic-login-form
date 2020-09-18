@@ -1,0 +1,109 @@
+*, 
+*::before,
+*::after {
+    box-sizing: border-box;
+} 
+
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container{
+    max-width: 600px;
+    box-shadow:  0 0 10px 0 #ccc;
+    border-radius: 10px;
+    padding: 30px;
+    // background-color: coral;
+    .login{
+        &-title{
+            padding: 2rem;
+            font-size: 2rem;
+            text-align: center;
+        }
+        &-controls{
+            position: relative;
+            display: flex;
+            justify-content: center;
+            label {
+                position: absolute;
+                top:0;
+                left: 28px;
+                line-height: calc(50px + 1em);
+                transition: font-size 100ms ease-in-out, top 250ms ease-in-out;
+            }
+            input {
+                width: 300px;
+                height: 50px;
+                border-radius: .5em;
+                background-color: #e1e1e1;
+                font-size: 1rem;
+                outline: 0;
+                border: 0;
+                margin: .5em;
+                padding: 0 20px;
+                transition: box-shadow 600ms ease-in-out;
+                &.valid,
+                &:focus {
+                    box-shadow: 5px 5px 5px 0 #ccc;
+                    ~ label {
+                        font-size: 12px;
+                        color: #333;
+                        top: -15px
+                    }
+                }
+            }
+            &--forgot{
+                display: flex;
+                justify-content: flex-end;
+                width: 100%;
+                &-link{
+                    font-size: 12px;
+                    color: rgba(51,51,51,0.6);
+                    margin: 0 1em;
+                    text-decoration: none;
+                    &:hover{
+                        color: #333;
+                    }
+                }
+            }
+            &--submit{
+                background: linear-gradient(45deg, #904e95, #e96443);
+                color: #fff;
+                border: 0;
+                padding: 10px 20px;
+                border-radius: .5em;
+                font-size: 16px;
+                cursor: pointer;
+                margin: 1rem;
+                outline: 0;
+                position: relative;
+                overflow: hidden;
+                transition: box-shadow 250ms ease-in-out;
+                &:before{
+                    position: absolute;
+                    content: "";
+                    top: -20px;
+                    left: -12px;
+                    width: 30px;
+                    height: 180%;
+                    background-color: rgba(255,255,255,.3);
+                    transform: translateX(-30px) rotate(20deg);
+                    transition: all 500ms ease-in-out;
+                }
+                &:hover,
+                &:focus,
+                &:active {
+                    box-shadow: 2px 2px 5px 0 #ccc;
+                    &::before{
+                        transform: translateX(120px) rotate(20deg);
+                    }
+                }
+            }
+        }
+    }
+}
