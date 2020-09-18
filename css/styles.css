@@ -63,10 +63,10 @@ body {
   border: 0;
   margin: .5em;
   padding: 0 20px;
-  -webkit-transition: -webkit-box-shadow 600ms ease-in-out;
-  transition: -webkit-box-shadow 600ms ease-in-out;
-  transition: box-shadow 600ms ease-in-out;
-  transition: box-shadow 600ms ease-in-out, -webkit-box-shadow 600ms ease-in-out;
+  -webkit-transition: -webkit-box-shadow 300ms ease-in-out;
+  transition: -webkit-box-shadow 300ms ease-in-out;
+  transition: box-shadow 300ms ease-in-out;
+  transition: box-shadow 300ms ease-in-out, -webkit-box-shadow 300ms ease-in-out;
 }
 
 .container .login-controls input.valid, .container .login-controls input:focus {
